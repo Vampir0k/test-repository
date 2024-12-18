@@ -2,9 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const greeting = "Казьмин Дмитрий Станиславович и Бредин Иван Евгеньевич";
+  const greeting = "Это тестовый проект Казьмина Дмитрия Станиславовича и Бредина Ивана Евгеньевича";
 
-  console.log('This is App ');
   return (
     <div className="App">
      <header className="App-header">
