@@ -1,0 +1,25 @@
+1.	  name: Unit Tests  # Название рабочего процесса
+2.	
+3.	  # Запуск процесса на событие pull_request для ветки main
+4.	  on:
+5.	    pull_request:
+6.	      branches: [ main ]
+7.	
+8.	  jobs:
+9.	    test:
+10.	      runs-on: ubuntu-latest  # Запуск на последней версии Ubuntu
+11.	
+12.	      steps:
+13.	        - uses: actions/checkout@v2  # Клонирование репозитория
+14.	
+15.	        - name: Setup Node.js
+16.	          uses: actions/setup-node@v2
+17.	          with:
+18.	            node-version: '16'  # Установить версию Node.js 16
+19.	
+20.	        - run: npm ci  # Установить зависимости
+21.	
+22.	        - run: npm test  # Запуск unit-тестов
+23.	 
+24.	
+ 
